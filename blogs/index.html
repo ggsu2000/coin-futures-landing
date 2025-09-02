@@ -1,14 +1,15 @@
 <!DOCTYPE html><html lang='ko'><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<base href="/" />
 <title>Blog | Futures &amp; Crypto Guides</title>
-<meta name="description" content="English blog hub for SEO." />
+<meta name="description" content="English blog hub." />
 <link rel="canonical" href="https://xn--v69ap5s3zcl6hspa.com/blogs/" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <meta name="naver-site-verification" content="c79065f2b66d1028502810ceadd1147509af7e8d" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Blog | Futures &amp; Crypto Guides" />
-<meta property="og:description" content="English blog hub for SEO." />
+<meta property="og:description" content="English blog hub." />
 <meta property="og:url" content="https://xn--v69ap5s3zcl6hspa.com/blogs/" />
 <meta property="og:site_name" content="선물거래소" />
 <meta property="og:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" />
@@ -24,7 +25,7 @@
   a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
   .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
 
-  /* Brandbar (logo + actions) */
+  /* Header */
   .brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
   .brand-left{display:flex;align-items:center;gap:12px}
   .brand-logo{height:32px;width:auto;display:block}
@@ -32,21 +33,17 @@
   .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
   .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
 
-  /* Top nav */
   .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap}
   .topnav a{padding:8px 12px;border-radius:10px;border:1px solid transparent;color:#e4e4e4}
   .topnav a.active,.topnav a:hover{border-color:var(--border);background:#111}
   .topnav a.highlight{color:var(--accent);border-color:rgba(255,213,74,.35);background:rgba(255,213,74,.08)}
 
-  /* Ticker */
   .ticker-wrap{border-bottom:1px solid var(--border);background:#0b0b0b;padding:2px 0}
   .tradingview-widget-container{height:36px}
 
-  /* Hero */
   .hero{border-bottom:1px solid var(--border);padding:10px 0 12px}
   .hero-img{display:block;width:var(--imgw);max-width:100%;height:auto;margin:0 auto}
 
-  /* Sections */
   h1{font-size:clamp(24px,3.6vw,40px);margin:16px 0 6px;letter-spacing:-.02em}
   h2{font-size:clamp(22px,3.2vw,32px);margin:28px 0 12px}
   .muted{color:var(--muted)}
@@ -55,19 +52,21 @@
   .btn-primary{background:var(--primary);border-color:#ff5f5f}
   .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-  footer{border-top:1px solid var(--border);padding:28px 0 50px;color:var(--muted);font-size:14px;margin-top:36px}
 
-  /* Mobile stacking order */
+  footer{border-top:1px solid var(--border);padding:24px 0 50px;color:var(--muted);font-size:14px;margin-top:36px}
+  .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+  .footer-cta .icon-btn{min-width:140px;justify-content:center}
+
   @media (max-width:640px){
-    .brandbar{flex-direction:column;align-items:flex-start;gap:10px}
-    .brand-right{width:100%}
-    .brand-right .icon-btn{flex:1;justify-content:center}
+    .brandbar{flex-direction:column;align-items:center;text-align:center}
+    .brand-left{width:100%;display:flex;justify-content:center}
+    .brand-right{width:100%;justify-content:center}
   }
-  @media (max-width:800px){.grid{grid-template-columns:1fr}}
+  @media (max-width:860px){.grid{grid-template-columns:1fr}}
 </style>
 
 </head><body><div class="brandbar">
-  <div class="brand-left"><a href="/" aria-label="Home"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" class="brand-logo" width="242" height="36"/></a></div>
+  <div class="brand-left"><a href="/"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" class="brand-logo" width="242" height="36"/></a></div>
   <div class="brand-right">
     <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
     <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
@@ -76,18 +75,25 @@
 </div><nav class="topnav"><a href="/">선물거래소(메인)</a><a href="/overseas-futures/">해외선물거래소</a><a href="/coin-futures/">코인선물거래소</a><a href="/nasdaq-futures/">나스닥선물거래소</a><a href="/private-futures/">사설선물거래소</a><a href="/blogs/" class="active">Blog</a></nav><div class="ticker-wrap">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-    {"symbols":[{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"},{"proName":"BINANCE:ETHUSDT","title":"Ethereum"},{"proName":"BINANCE:XRPUSDT","title":"XRP"},{"proName":"BINANCE:BNBUSDT","title":"BNB"},{"proName":"BINANCE:SOLUSDT","title":"Solana"},{"proName":"BINANCE:ADAUSDT","title":"ADA"},{"proName":"BINANCE:DOGEUSDT","title":"DOGE"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"ko"}
-    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"},{"proName":"BINANCE:ETHUSDT","title":"Ethereum"},{"proName":"BINANCE:XRPUSDT","title":"XRP"},{"proName":"BINANCE:BNBUSDT","title":"BNB"},{"proName":"BINANCE:SOLUSDT","title":"Solana"},{"proName":"BINANCE:ADAUSDT","title":"ADA"},{"proName":"BINANCE:DOGEUSDT","title":"DOGE"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"ko"}</script>
   </div>
 </div><header class="hero">
   <div class="container" style="display:flex;justify-content:center">
     <a href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored">
-      <img class="hero-img" src="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" alt="선물거래소 이벤트" width="458" height="2290"/>
+      <img class="hero-img" src="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" alt="선물거래소 이벤트" width="458" height="2290" referrerpolicy="no-referrer"/>
     </a>
   </div>
 </header><main class="container">
-  <h1>Blog</h1>
-  <p class="muted">Actionable explainers on fees, indicators, wallets, transfers and patterns.</p>
-  <div class="grid"><a class="card" href="/blogs/binance-exchange/"><h3>Binance exchange</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/exchange-rankings/"><h3>Crypto exchange rankings</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/defi-coins/"><h3>DeFi coins overview</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/triangle-consolidation/"><h3>Triangle consolidation pattern</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-signup/"><h3>How to sign up for Binance</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/crypto-forum/"><h3>Crypto forum guide</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/upbit-to-binance-transfer/"><h3>Transfer from Upbit to Binance</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/kimchi-premium/"><h3>Kimchi premium explained</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/wonyotti/"><h3>Wonyotti (influencer) tracker</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/mexc-fee-discount/"><h3>MEXC fee discount</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/tradingview-best-indicators/"><h3>Best TradingView indicators</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/kr-exchange-rankings/"><h3>Korean crypto exchange rankings</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/dead-cat-bounce/"><h3>Dead cat bounce</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/tradingview-howto/"><h3>How to use TradingView</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/coinbase-kr-signup/"><h3>Coinbase sign‑up for Koreans</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/okx-kyc/"><h3>OKX KYC verification</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/paper-trading-sites/"><h3>Best paper trading sites</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/momentum-definition/"><h3>What is momentum?</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/deviation-from-moving-average/"><h3>Deviation from MA (Dispersion)</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-chart/"><h3>Binance chart basics</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bollinger-bands/"><h3>Bollinger Bands: how to use</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/rsi-settings/"><h3>RSI settings in TradingView</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/metamask-wallet-guide/"><h3>Create a MetaMask wallet</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bitget-exchange/"><h3>Bitget exchange</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bingx-exchange/"><h3>BingX exchange</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-futures-fee/"><h3>Binance futures fees</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/funding-rate/"><h3>Funding rate explained</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/crypto-trading-bots/"><h3>Crypto trading bots</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/inverse-head-shoulders/"><h3>Inverse head and shoulders</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bitcoin-transfer/"><h3>How to send Bitcoin &amp; fees</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-fee-overview/"><h3>Binance fees overview</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/long-short-bitcoin/"><h3>How to long/short Bitcoin</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/self-custody-wallet/"><h3>Self‑custody crypto wallet</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/tradingview-indicators-reco/"><h3>Recommended TradingView indicators</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/tradingview-deals-darkmode/"><h3>TradingView Black Friday &amp; discounts</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/kimchi-trading/"><h3>Kimchi premium trading</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/ichimoku-cloud/"><h3>Ichimoku Cloud guide</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/double-bottom-pattern/"><h3>Double bottom pattern</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bybit-korean-fees/"><h3>Bybit in Korean &amp; fees</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/buy-xrp-usa/"><h3>How to buy XRP in the U.S.</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-leverage/"><h3>Binance leverage explained</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bybit-mobile-chart/"><h3>Bybit mobile chart settings</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/bitcoin-liquidation-map/"><h3>Bitcoin liquidation map</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/gateio-exchange/"><h3>Gate.io exchange</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/global-exchange-rankings/"><h3>Global exchange rankings</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/referral-programs/"><h3>Referral programs (Bitget/Binance etc.)</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/referral-codes/"><h3>Referral code deep‑dive (Bitget/Binance)</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/coin-futures-howto/"><h3>How to trade coin futures</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/binance-to-upbit-transfer/"><h3>Transfer from Binance to Upbit</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/upbit-futures/"><h3>Does Upbit have futures?</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a><a class="card" href="/blogs/punycode-idn/"><h3>Punycode &amp; IDN domains</h3><p class="muted">2025-09-02</p><p class="muted">Quick guide, FAQs and internal links.</p></a></div>
-</main><footer><div class='container'><p><strong>선물거래소</strong> — 가이드 & 이벤트 정보</p><p class='muted'>© 2025 선물거래소. All rights reserved.</p></div></footer></body></html>
+  <h1>Blog</h1><p class="muted">English guides for SEO.</p>
+  <div class="grid"><a class="card" href="/blogs/binance-exchange/"><h3>Binance exchange</h3><p class="muted">Quick guide and links.</p></a><a class="card" href="/blogs/funding-rate/"><h3>Funding rate explained</h3><p class="muted">Quick guide and links.</p></a></div>
+</main><footer>
+  <div class="container">
+    <p><strong>선물거래소</strong> — 가이드 & 이벤트 정보</p>
+    <div class="footer-cta">
+      <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
+      <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
+      <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
+    </div>
+    <p class="muted" style="margin-top:12px">© 2025 선물거래소. All rights reserved.</p>
+  </div>
+</footer></body></html>
