@@ -1,17 +1,18 @@
-# Add trailing slash
-/overseas-futures     /overseas-futures/               301!
-/coin-futures         /coin-futures/                   301!
-/nasdaq-futures       /nasdaq-futures/                 301!
-/private-futures      /private-futures/                301!
-/blogs                /blogs/                          301!
+# Serve folder index for pretty URLs (with OR without trailing slash)
+/overseas-futures     /overseas-futures/index.html   200
+/overseas-futures/    /overseas-futures/index.html   200
+/coin-futures         /coin-futures/index.html       200
+/coin-futures/        /coin-futures/index.html       200
+/nasdaq-futures       /nasdaq-futures/index.html     200
+/nasdaq-futures/      /nasdaq-futures/index.html     200
+/private-futures      /private-futures/index.html    200
+/private-futures/     /private-futures/index.html    200
+/blogs                /blogs/index.html              200
+/blogs/               /blogs/index.html              200
 
-# Pretty to actual file (serve index.html while keeping pretty URL)
-/overseas-futures/    /overseas-futures/index.html     200
-/coin-futures/        /coin-futures/index.html         200
-/nasdaq-futures/      /nasdaq-futures/index.html       200
-/private-futures/     /private-futures/index.html      200
-/blogs/               /blogs/index.html                200
-
-# Legacy .html → folder
-/:page.html           /:page/                          301
-/blogs/:slug.html     /blogs/:slug/                    301
+# Legacy .html URLs (if any remain in the repo or external links)
+/overseas-futures.html   /overseas-futures/index.html   200
+/coin-futures.html       /coin-futures/index.html       200
+/nasdaq-futures.html     /nasdaq-futures/index.html     200
+/private-futures.html    /private-futures/index.html    200
+/blogs.html              /blogs/index.html              200
