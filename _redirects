@@ -1,2 +1,10 @@
-/:page.html   /:page/   301
-/blogs/:slug.html   /blogs/:slug/   301
+# Force trailing slash to prefer directory index even if old *.html exist
+/overseas-futures   /overseas-futures/   301!
+/coin-futures       /coin-futures/       301!
+/nasdaq-futures     /nasdaq-futures/     301!
+/private-futures    /private-futures/    301!
+/blogs              /blogs/              301!
+
+# Legacy .html to folder
+/:page.html         /:page/              301
+/blogs/:slug.html   /blogs/:slug/        301

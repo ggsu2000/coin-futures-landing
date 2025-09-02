@@ -16,24 +16,16 @@
 <meta property="og:locale" content="ko_KR" />
 
 <style>
-  :root{
-    --primary:#ff4d4d; --accent:#ffd54a; --text:#eaeaea; --muted:#b3b3b3; --bg:#000;
-    --card:#0f0f0f; --border:#1f1f1f; --radius:14px; --imgw:458px;
-  }
+  :root{--primary:#ff4d4d;--accent:#ffd54a;--text:#eaeaea;--muted:#b3b3b3;--bg:#000;--card:#0f0f0f;--border:#1f1f1f;--radius:14px;--imgw:458px}
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
   a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
   .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
 
-  /* Header */
-  .brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
-  .brand-left{display:flex;align-items:center;gap:12px}
+  .brandbar{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
   .brand-logo{height:32px;width:auto;display:block}
-  .brand-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
-  .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
 
-  .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap}
+  .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap;justify-content:center}
   .topnav a{padding:8px 12px;border-radius:10px;border:1px solid transparent;color:#e4e4e4}
   .topnav a.active,.topnav a:hover{border-color:var(--border);background:#111}
   .topnav a.highlight{color:var(--accent);border-color:rgba(255,213,74,.35);background:rgba(255,213,74,.08)}
@@ -47,7 +39,7 @@
   h1{font-size:clamp(24px,3.6vw,40px);margin:16px 0 6px;letter-spacing:-.02em}
   h2{font-size:clamp(22px,3.2vw,32px);margin:28px 0 12px}
   .muted{color:var(--muted)}
-  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 6px}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 6px;justify-content:center}
   .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
   .btn-primary{background:var(--primary);border-color:#ff5f5f}
   .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
@@ -56,22 +48,14 @@
   footer{border-top:1px solid var(--border);padding:24px 0 50px;color:var(--muted);font-size:14px;margin-top:36px}
   .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px}
   .footer-cta .icon-btn{min-width:140px;justify-content:center}
+  .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
+  .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
 
-  @media (max-width:640px){
-    .brandbar{flex-direction:column;align-items:center;text-align:center}
-    .brand-left{width:100%;display:flex;justify-content:center}
-    .brand-right{width:100%;justify-content:center}
-  }
   @media (max-width:860px){.grid{grid-template-columns:1fr}}
 </style>
 
 </head><body><div class="brandbar">
-  <div class="brand-left"><a href="/"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" class="brand-logo" width="242" height="36"/></a></div>
-  <div class="brand-right">
-    <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
-    <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
-    <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
-  </div>
+  <a href="/" aria-label="Home"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" class="brand-logo" width="242" height="36"/></a>
 </div><nav class="topnav"><a href="/">선물거래소(메인)</a><a href="/overseas-futures/" class="active">해외선물거래소</a><a href="/coin-futures/">코인선물거래소</a><a href="/nasdaq-futures/">나스닥선물거래소</a><a href="/private-futures/">사설선물거래소</a><a href="/blogs/">Blog</a></nav><div class="ticker-wrap">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
@@ -98,7 +82,6 @@
         <a class="btn" href="#faq">FAQ</a>
       </div>
     </div>
-    
   <section id="overview" class="container">
     <h2>개요</h2>
     <p class="muted">증거금(교차/격리)·롱/숏·주문유형(마켓/리밋/스탑) 등 핵심 개념 정리.</p>
@@ -114,32 +97,29 @@
   <section id="leverage" class="container">
     <h2>레버리지 & 리스크</h2>
     <div class="grid">
-      <div class="card"><h3>교차/격리</h3><p class="muted">증거금 분리/공유 전략</p></div>
-      <div class="card"><h3>포지션 사이징</h3><p class="muted">위험 한도·손절/익절</p></div>
-      <div class="card"><h3>유지증거금</h3><p class="muted">배율·청산 트리거</p></div>
+      <div class="card"><h3>교차/격리</h3></div>
+      <div class="card"><h3>포지션 사이징</h3></div>
+      <div class="card"><h3>유지증거금</h3></div>
     </div>
   </section>
   <section id="events" class="container">
     <h2>이벤트</h2>
-    <p class="muted">신규/거래 미션 보너스, 수수료 할인.</p>
     <p><a class="btn btn-primary" href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored">이벤트 바로가기</a></p>
   </section>
   <section id="faq" class="container">
     <h2>FAQ</h2>
-    <details><summary>초보 주의사항</summary><p class="muted">과도한 배율·무계획 진입을 피하고 손실 한도를 먼저 정하세요.</p></details>
-    <details><summary>비용 절감 팁</summary><p class="muted">메이커 전략·수수료 할인·리베이트·거래량 조건 확인.</p></details>
+    <details><summary>초보 주의사항</summary><p class="muted">과도한 배율을 피하고 손실 한도를 먼저 정하세요.</p></details>
   </section>
   
     <section class="container">
       <h2>연관 페이지</h2>
       <div class="grid">
-        <a class="card" href="/overseas-futures/"><h3>해외선물거래소</h3><p class="muted">글로벌 유동성</p></a>
-        <a class="card" href="/coin-futures/"><h3>코인선물거래소</h3><p class="muted">디지털 자산 파생상품</p></a>
-        <a class="card" href="/nasdaq-futures/"><h3>나스닥선물거래소</h3><p class="muted">지수 파생상품</p></a>
-        <a class="card" href="/private-futures/"><h3>사설선물거래소</h3><p class="muted">규제·신뢰 리스크</p></a>
+        <a class="card" href="/overseas-futures/"><h3>해외선물거래소</h3></a>
+        <a class="card" href="/coin-futures/"><h3>코인선물거래소</h3></a>
+        <a class="card" href="/nasdaq-futures/"><h3>나스닥선물거래소</h3></a>
+        <a class="card" href="/private-futures/"><h3>사설선물거래소</h3></a>
       </div>
     </section>
-    
 <footer>
   <div class="container">
     <p><strong>선물거래소</strong> — 가이드 & 이벤트 정보</p>
