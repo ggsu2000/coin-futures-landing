@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+User-agent: AdsBot-Google
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Yeti
+Allow: /
+User-agent: NaverBot
+Allow: /
+
+Sitemap: https://xn--v69ap5s3zcl6hspa.com/sitemap.xml
