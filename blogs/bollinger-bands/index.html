@@ -1,116 +1,111 @@
-<!DOCTYPE html><html lang='ko'><head>
+<!DOCTYPE html><html lang='en'><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bollinger Bands: how to use | Blog</title>
-<meta name="description" content="Bollinger Bands: how to use explained with examples and links." />
+<base href="/" />
+<title>How to Read Bollinger Bands | Sevenbit Blog</title>
+<meta name="description" content="Volatility squeeze and breakout strategies." />
 <link rel="canonical" href="https://xn--v69ap5s3zcl6hspa.com/blogs/bollinger-bands/" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 <meta name="naver-site-verification" content="c79065f2b66d1028502810ceadd1147509af7e8d" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Bollinger Bands: how to use | Blog" />
-<meta property="og:description" content="Bollinger Bands: how to use explained with examples and links." />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Read Bollinger Bands | Sevenbit Blog" />
+<meta property="og:description" content="Volatility squeeze and breakout strategies." />
 <meta property="og:url" content="https://xn--v69ap5s3zcl6hspa.com/blogs/bollinger-bands/" />
-<meta property="og:site_name" content="선물거래소" />
+<meta property="og:site_name" content="선물거래소 Blog" />
 <meta property="og:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" />
-<meta property="og:locale" content="ko_KR" />
+<meta property="og:locale" content="en_US" />
 
 <style>
-  :root{
-    --primary:#ff4d4d; --accent:#ffd54a; --text:#eaeaea; --muted:#b3b3b3; --bg:#000;
-    --card:#0f0f0f; --border:#1f1f1f; --radius:14px; --imgw:458px;
-  }
+  :root{--primary:#ff4d4d;--accent:#ffd54a;--text:#eaeaea;--muted:#b3b3b3;--bg:#000;--card:#0f0f0f;--border:#1f1f1f;--radius:14px;--imgw:458px}
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
   a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
   .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
-
-  /* Brandbar (logo + actions) */
-  .brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
-  .brand-left{display:flex;align-items:center;gap:12px}
+  .brandbar{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
   .brand-logo{height:32px;width:auto;display:block}
-  .brand-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
-  .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
-
-  /* Top nav */
-  .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap}
+  .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap;justify-content:center}
   .topnav a{padding:8px 12px;border-radius:10px;border:1px solid transparent;color:#e4e4e4}
   .topnav a.active,.topnav a:hover{border-color:var(--border);background:#111}
   .topnav a.highlight{color:var(--accent);border-color:rgba(255,213,74,.35);background:rgba(255,213,74,.08)}
-
-  /* Ticker */
   .ticker-wrap{border-bottom:1px solid var(--border);background:#0b0b0b;padding:2px 0}
   .tradingview-widget-container{height:36px}
-
-  /* Hero */
   .hero{border-bottom:1px solid var(--border);padding:10px 0 12px}
   .hero-img{display:block;width:var(--imgw);max-width:100%;height:auto;margin:0 auto}
-
-  /* Sections */
   h1{font-size:clamp(24px,3.6vw,40px);margin:16px 0 6px;letter-spacing:-.02em}
   h2{font-size:clamp(22px,3.2vw,32px);margin:28px 0 12px}
   .muted{color:var(--muted)}
-  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 6px}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 6px;justify-content:center}
   .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
   .btn-primary{background:var(--primary);border-color:#ff5f5f}
   .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-  footer{border-top:1px solid var(--border);padding:28px 0 50px;color:var(--muted);font-size:14px;margin-top:36px}
-
-  /* Mobile stacking order */
-  @media (max-width:640px){
-    .brandbar{flex-direction:column;align-items:flex-start;gap:10px}
-    .brand-right{width:100%}
-    .brand-right .icon-btn{flex:1;justify-content:center}
-  }
-  @media (max-width:800px){.grid{grid-template-columns:1fr}}
+  footer{border-top:1px solid var(--border);padding:24px 0 36px;color:#bbb;font-size:14px;margin-top:36px}
+  .footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px;opacity:.9}
+  .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+  .footer-cta .icon-btn{min-width:140px;justify-content:center}
+  .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
+  .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
+  @media (max-width:860px){.grid{grid-template-columns:1fr}.hero-img{width:100%;}}
 </style>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Read Bollinger Bands | Sevenbit Blog", "datePublished": "2025-09-02T18:04:42Z", "author": {"@type": "Organization", "name": "Sevenbit"}, "publisher": {"@type": "Organization", "name": "Sevenbit", "logo": {"@type": "ImageObject", "url": "https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png"}}, "mainEntityOfPage": "https://xn--v69ap5s3zcl6hspa.com/blogs/bollinger-bands/"}</script>
 </head><body><div class="brandbar">
-  <div class="brand-left"><a href="/" aria-label="Home"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" class="brand-logo" width="242" height="36"/></a></div>
-  <div class="brand-right">
-    <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
-    <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
-    <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
-  </div>
+  <a href="/" aria-label="Home"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="Company logo" class="brand-logo" width="242" height="36"/></a>
 </div><nav class="topnav"><a href="/">선물거래소(메인)</a><a href="/overseas-futures/">해외선물거래소</a><a href="/coin-futures/">코인선물거래소</a><a href="/nasdaq-futures/">나스닥선물거래소</a><a href="/private-futures/">사설선물거래소</a><a href="/blogs/" class="active">Blog</a></nav><div class="ticker-wrap">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-    {"symbols":[{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"},{"proName":"BINANCE:ETHUSDT","title":"Ethereum"},{"proName":"BINANCE:XRPUSDT","title":"XRP"},{"proName":"BINANCE:BNBUSDT","title":"BNB"},{"proName":"BINANCE:SOLUSDT","title":"Solana"},{"proName":"BINANCE:ADAUSDT","title":"ADA"},{"proName":"BINANCE:DOGEUSDT","title":"DOGE"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"ko"}
-    </script>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"BINANCE:BTCUSDT","title":"Bitcoin"},{"proName":"BINANCE:ETHUSDT","title":"Ethereum"},{"proName":"BINANCE:XRPUSDT","title":"XRP"},{"proName":"BINANCE:BNBUSDT","title":"BNB"},{"proName":"BINANCE:SOLUSDT","title":"Solana"},{"proName":"BINANCE:ADAUSDT","title":"ADA"},{"proName":"BINANCE:DOGEUSDT","title":"DOGE"}],"showSymbolLogo":true,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}</script>
   </div>
 </div><header class="hero">
   <div class="container" style="display:flex;justify-content:center">
     <a href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored">
-      <img class="hero-img" src="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" alt="선물거래소 이벤트" width="458" height="2290"/>
+      <img class="hero-img" src="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" alt="Promo" width="458" height="2290" referrerpolicy="no-referrer"/>
     </a>
   </div>
-</header><main class="container">
-  <h1>Bollinger Bands: how to use</h1>
-  <p class="muted">2025-09-02 · Editorial team</p>
-  <p>This page summarises the key points about <strong>Bollinger Bands: how to use</strong> with a checklist and links to related guides.</p>
-  <h2>Key takeaways</h2>
+</header>
+<main class="container">
+  <h1>How to Read Bollinger Bands</h1>
+  <p class="muted">Volatility squeeze and breakout strategies.</p>
+
+  <h2>Overview</h2>
+  <p>This article covers the concept, practical use-cases, risks, and a checklist for Korean traders.</p>
+
+  <h2>Key Points</h2>
   <ul>
-    <li>Definition and where it applies in real trading.</li>
-    <li>Costs: maker/taker fees, funding, withdrawal, discounts.</li>
-    <li>Risk control: position sizing, leverage caps, stop‑loss / take‑profit.</li>
+    <li>Clear definitions first.</li>
+    <li>Actionable steps with screenshots you can add later.</li>
+    <li>Risk management always comes before profit targets.</li>
   </ul>
-  <h2>Checklist</h2>
-  <ul>
-    <li>Confirm fee tier or referral/discount code before trading.</li>
-    <li>Backtest basics on <a href="/blogs/paper-trading-sites/">paper trading</a> first.</li>
-    <li>Use alerts and templates in <a href="/blogs/tradingview-howto/">TradingView</a>.</li>
-  </ul>
-  <p><a class="btn btn-primary" href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored">Claim event bonus</a></p>
+
+  <h2>Step-by-step</h2>
+  <ol>
+    <li>Open or verify an account.</li>
+    <li>Set fee discounts when available.</li>
+    <li>Test small size, then scale with rules.</li>
+  </ol>
+
+  <h2>Internal Links</h2>
+  <p>
+    <a href="/coin-futures/">Coin Futures</a> ·
+    <a href="/overseas-futures/">Overseas Futures</a> ·
+    <a href="/nasdaq-futures/">Nasdaq Futures</a> ·
+    <a href="/private-futures/">Private Futures</a>
+  </p>
+
+  <h2>FAQs</h2>
+  <details><summary>Is this strategy suitable for beginners?</summary><p>Start with paper trading and strict risk limits.</p></details>
+  <details><summary>What fees matter most?</summary><p>Maker/taker, funding, and conversion fees.</p></details>
 </main>
-<section class="container">
-  <h2>Related pages</h2>
-  <div class="grid">
-    <a class="card" href="/coin-futures/"><h3>Coin futures exchanges</h3><p class="muted">Depth & fees at a glance</p></a>
-    <a class="card" href="/overseas-futures/"><h3>Global futures</h3><p class="muted">Liquidity & spreads</p></a>
-    <a class="card" href="/nasdaq-futures/"><h3>NASDAQ futures</h3><p class="muted">Index derivatives</p></a>
-    <a class="card" href="/private-futures/"><h3>Unregulated venues</h3><p class="muted">Risks & caveats</p></a>
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <a href="/"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="Company logo" width="162" height="24"/></a>
+    </div>
+    <div class="footer-cta">
+      <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
+      <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
+      <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">About</a>
+    </div>
+    <p class="muted" style="margin-top:12px;text-align:center">© 2025 Futures Exchange Guide. All rights reserved.</p>
   </div>
-</section>
-<footer><div class='container'><p><strong>선물거래소</strong> — 가이드 & 이벤트 정보</p><p class='muted'>© 2025 선물거래소. All rights reserved.</p></div></footer></body></html>
+</footer></body></html>

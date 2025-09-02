@@ -1,4 +1,3 @@
-# Serve folder index for pretty URLs (with OR without trailing slash)
 /overseas-futures     /overseas-futures/index.html   200
 /overseas-futures/    /overseas-futures/index.html   200
 /coin-futures         /coin-futures/index.html       200
@@ -9,10 +8,5 @@
 /private-futures/     /private-futures/index.html    200
 /blogs                /blogs/index.html              200
 /blogs/               /blogs/index.html              200
-
-# Legacy .html URLs (if any remain in the repo or external links)
-/overseas-futures.html   /overseas-futures/index.html   200
-/coin-futures.html       /coin-futures/index.html       200
-/nasdaq-futures.html     /nasdaq-futures/index.html     200
-/private-futures.html    /private-futures/index.html    200
-/blogs.html              /blogs/index.html              200
+/blogs/:slug          /blogs/:slug/index.html        200
+/blogs/:slug/         /blogs/:slug/index.html        200
