@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>선물거래소 | 코인선물거래소 & 코인거래소 이벤트 안내</title>
+  <meta name="description" content="선물거래소 공식 랜딩페이지. 코인선물거래소 비교, 수수료, 레버리지, 진행 중인 코인거래소 이벤트 정보를 한곳에서 확인하세요." />
+  <link rel="canonical" href="https://example.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="선물거래소 | 코인선물거래소 & 코인거래소 이벤트" />
+  <meta property="og:description" content="초보부터 프로까지: 선물거래소 핵심 가이드와 코인거래소 이벤트 모음" />
+  <meta property="og:url" content="https://example.netlify.app/" />
+  <meta property="og:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="선물거래소 | 코인선물거래소 & 코인거래소 이벤트" />
+  <meta name="twitter:description" content="선물거래소 핵심 가이드 & 코인거래소 이벤트 혜택" />
+  <meta name="twitter:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp" />
+
+  <style>
+    :root {
+      --primary: #ff4d4d;
+      --text: #eaeaea;
+      --muted: #b3b3b3;
+      --bg: #000000;
+      --card: #0f0f0f;
+      --border: #1f1f1f;
+      --radius: 14px;
+      /* intrinsic image width from URL hint w_458 */
+      --img-width: 458px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* HERO - natural pixel size on desktop, responsive on mobile */
+    .hero { border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    .hero-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0; margin: 0;
+    }
+    .hero-link { display: inline-block; }
+    .hero-img {
+      display: block;
+      width: var(--img-width);   /* desktop: show at original pixel width */
+      height: auto;              /* keep aspect ratio */
+      margin: 0 auto;
+      border: none;
+      border-radius: 0;
+    }
+
+    .hero .container { padding: 16px 20px 8px; }
+    .hero h1 {
+      font-size: clamp(24px, 3.6vw, 40px);
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero p { margin: 0 0 18px; color: var(--muted); }
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #121212;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform .1s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-1px); background: #181818; }
+    .btn-primary { background: var(--primary); border-color: #ff5f5f; color: #fff; }
+    .btn-primary:hover { background: #ff2f2f; }
+
+    section { padding: 48px 0; }
+    section h2 { font-size: clamp(22px, 3.2vw, 32px); margin: 0 0 14px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 50px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* MOBILE: fit to screen width */
+    @media (max-width: 520px) {
+      .hero-img { width: 100%; height: auto; }
+      .hero .container { padding-left: 16px; padding-right: 16px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-frame">
+      <a class="hero-link" href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored" aria-label="선물거래소 이벤트 바로가기">
+        <img
+          src="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png/v1/fill/w_458,h_2290,al_c,q_90/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.webp"
+          alt="선물거래소 이벤트 배너"
+          class="hero-img"
+          loading="eager"
+          fetchpriority="high"
+          width="458"
+          height="2290"
+        />
+      </a>
+    </div>
+
+    <div class="container">
+      <h1>선물거래소: 코인선물거래소 가이드 & 코인거래소 이벤트</h1>
+      <p>수수료·레버리지·유동성·보안까지 핵심만 정리한 <strong>선물거래소</strong> 입문/비교 가이드. 신규 가입자를 위한 <strong>코인거래소 이벤트</strong> 모음도 확인해 보세요.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#guide">선물거래소 핵심 가이드</a>
+        <a class="btn" href="#events">진행 중인 이벤트</a>
+        <a class="btn" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="guide" aria-labelledby="h2-guide">
+      <h2 id="h2-guide">코인선물거래소 선택 기준</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>① 수수료 & 유동성</h3>
+          <p class="muted">메이커/테이커 수수료 및 실제 체결 유동성은 장기 수익률에 큰 영향을 줍니다.</p>
+        </article>
+        <article class="card">
+          <h3>② 보안 & 안정성</h3>
+          <p class="muted">2FA, 출금 화이트리스트, 콜드월렛 비중 등 보안 체계를 확인하세요.</p>
+        </article>
+        <article class="card">
+          <h3>③ 레버리지 & 위험관리</h3>
+          <p class="muted">무리한 배율은 청산 위험을 키웁니다. 고정 손절/익절 규칙을 세우세요.</p>
+        </article>
+        <article class="card">
+          <h3>④ 파생상품 종류</h3>
+          <p class="muted">USDT·코인 마진, 무기한·분기물 등 상품 구성을 점검하세요.</p>
+        </article>
+        <article class="card">
+          <h3>⑤ 고객지원 & 한글화</h3>
+          <p class="muted">한국어 UI/문서/상담 지원은 초보자에게 큰 장점이 됩니다.</p>
+        </article>
+        <article class="card">
+          <h3>⑥ 이벤트 & 혜택</h3>
+          <p class="muted"><a href="#events">코인거래소 이벤트</a>로 수수료 할인·보너스를 확보해 초기 부담을 줄이세요.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="events" aria-labelledby="h2-events">
+      <h2 id="h2-events">코인거래소 이벤트 안내</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>신규 가입 보너스</h3>
+          <p class="muted">이메일 등록 및 간단한 미션으로 거래 크레딧을 제공하는 프로모션.</p>
+          <p><a href="https://www.7sevenbit.com/member/signup?rfc=get100" target="_blank" rel="noopener nofollow sponsored">이벤트 바로가기</a></p>
+        </article>
+        <article class="card">
+          <h3>수수료 할인</h3>
+          <p class="muted">지정가/시장가 거래 수수료를 일정 기간 인하하는 이벤트.</p>
+        </article>
+        <article class="card">
+          <h3>입금/거래 미션</h3>
+          <p class="muted">입금·거래량 기준 달성 시 추가 보너스 제공.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="howto" aria-labelledby="h2-howto">
+      <h2 id="h2-howto">선물거래소 시작 방법</h2>
+      <ol>
+        <li>계정 생성 및 2단계 인증(2FA) 활성화</li>
+        <li>USDT/원화 등 예치 또는 전송</li>
+        <li>교차/격리, 레버리지 배율 설정</li>
+        <li>시장가/지정가 주문 방식 선택</li>
+        <li>손절·익절 가격 미리 설정해 리스크 관리</li>
+      </ol>
+    </section>
+
+    <section id="faq" aria-labelledby="h2-faq">
+      <h2 id="h2-faq">자주 묻는 질문 (FAQ)</h2>
+      <details>
+        <summary>선물거래소와 현물거래소 차이는?</summary>
+        <p class="muted">현물은 코인을 실제로 보유하고, 선물은 가격 변동에 베팅하는 파생상품입니다.</p>
+      </details>
+      <details>
+        <summary>초보가 주의할 점은?</summary>
+        <p class="muted">과도한 레버리지를 피하고 1회 손실 한도를 정해 손실 확대를 방지하세요.</p>
+      </details>
+      <details>
+        <summary>이벤트 참여 시 체크리스트</summary>
+        <p class="muted">혜택 조건, 지급 방식(바우처/현금성), 출금 가능 여부와 기간을 확인하세요.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>선물거래소</strong> — 코인선물거래소 가이드 & 코인거래소 이벤트 정보 제공 페이지</p>
+      <p class="muted">© 2025 선물거래소. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
