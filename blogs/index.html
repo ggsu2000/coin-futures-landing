@@ -45,8 +45,9 @@
   .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
   .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
 
-  footer{border-top:1px solid var(--border);padding:24px 0 50px;color:var(--muted);font-size:14px;margin-top:36px}
-  .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+  footer{border-top:1px solid var(--border);padding:24px 0 36px;color:var(--muted);font-size:14px;margin-top:36px}
+  .footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px;opacity:.9}
+  .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
   .footer-cta .icon-btn{min-width:140px;justify-content:center}
   .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
   .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
@@ -69,12 +70,14 @@
   </div>
 </header><main class='container'><h1>Blog</h1><p class='muted'>English guides.</p></main><footer>
   <div class="container">
-    <p><strong>선물거래소</strong> — 가이드 & 이벤트 정보</p>
+    <div class="footer-brand">
+      <a href="/"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png" alt="회사 로고" width="162" height="24"/></a>
+    </div>
     <div class="footer-cta">
       <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="noopener">Telegram</a>
       <a class="icon-btn icon-kakao" href="https://open.kakao.com/o/s6WqJjvh" target="_blank" rel="noopener">KakaoTalk</a>
       <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
     </div>
-    <p class="muted" style="margin-top:12px">© 2025 선물거래소. All rights reserved.</p>
+    <p class="muted" style="margin-top:12px;text-align:center">© 2025 선물거래소. All rights reserved.</p>
   </div>
 </footer></body></html>
