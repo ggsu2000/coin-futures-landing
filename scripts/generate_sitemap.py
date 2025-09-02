@@ -6,7 +6,6 @@ BASE_URL = os.environ.get("BASE_URL", "https://xn--v69ap5s3zcl6hspa.com")
 ROOT = os.getcwd()
 
 def to_url(path: str) -> str:
-    # Map .../index.html -> .../
     if path.endswith("index.html"):
         rel = "/" + os.path.relpath(os.path.dirname(path), ROOT).replace("\\", "/")
         if rel == "/.":
@@ -22,7 +21,6 @@ def lastmod(path: str) -> str:
 def collect_html_files():
     htmls = []
     for root, dirs, files in os.walk(ROOT):
-        # skip dot/hidden & build dirs
         dirs[:] = [d for d in dirs if not d.startswith(".") and d not in (".git", "node_modules", "dist", "build")]
         for f in files:
             if f.endswith(".html"):
