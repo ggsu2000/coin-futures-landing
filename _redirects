@@ -10,3 +10,4 @@
 /blogs/               /blogs/index.html              200
 /blogs/:slug          /blogs/:slug/index.html        200
 /blogs/:slug/         /blogs/:slug/index.html        200
+/:page.html           /:page/index.html              200
