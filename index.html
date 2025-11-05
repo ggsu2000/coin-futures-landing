@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <!-- ================= 검색엔진 인증 ================= -->
   <meta name="google-site-verification" content="-xBpbm-N0qg6heCliCziWTLlk5-7ylrX2DCgZNeO6LM" />
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/" />
+  <meta name="naver-site-verification" content="c79065f2b66d1028502810ceadd1147509af7e8d" />
 
-  <!-- ================= SEO 기본 ================= -->
+  <!-- ================= 기본 설정 ================= -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- ================= SEO 메타 ================= -->
   <title>코인 선물거래소 비교 가이드 | 안전한 거래소 선택 & 이벤트 정보</title>
   <meta name="description" content="코인 선물거래소 종합 비교: 수수료·유동성·보안·이벤트를 기준으로 안전한 거래소를 선택하는 방법을 안내합니다. 초보자부터 트레이더까지 활용 가능한 실전 가이드.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-  <!-- 검색 색인 허용 -->
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-
-  <!-- 표준 URL (푸니코드 도메인 고정) -->
+  <!-- ================= URL 및 다국어 ================= -->
   <link rel="canonical" href="https://xn--v69ap5s3zcl6hspa.com/" />
-
-  <!-- 다국어/언어 설정 -->
   <link rel="alternate" hreflang="ko-KR" href="https://xn--v69ap5s3zcl6hspa.com/" />
   <link rel="alternate" hreflang="x-default" href="https://xn--v69ap5s3zcl6hspa.com/" />
+
+  <!-- ================= 파비콘 및 색상 ================= -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- ================= 사전 연결 ================= -->
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://static.wixstatic.com">
 
   <!-- ================= Open Graph ================= -->
   <meta property="og:type" content="website" />
@@ -27,7 +37,7 @@
   <meta property="og:url" content="https://xn--v69ap5s3zcl6hspa.com/" />
   <meta property="og:title" content="코인 선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
   <meta property="og:description" content="코인 선물거래소 비교 가이드: 수수료·유동성·보안·이벤트까지 종합 분석. 초보자와 트레이더 모두를 위한 스마트한 거래소 선택법." />
-  <meta property="og:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png" />
+  <meta property="og:image" content="https://xn--v69ap5s3zcl6hspa.com/og-main.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="ko_KR" />
@@ -36,26 +46,30 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="코인 선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
   <meta name="twitter:description" content="수수료·유동성·보안·이벤트를 기준으로 코인 선물거래소를 비교합니다. 초보자도 안전하게 시작할 수 있는 가이드." />
-  <meta name="twitter:image" content="https://static.wixstatic.com/media/fefa38_dce4010d9c9d480dbc7a927e5700dd2e~mv2.png" />
-
-  <!-- ================= 사이트 검증 ================= -->
-  <meta name="naver-site-verification" content="c79065f2b66d1028502810ceadd1147509af7e8d" />
+  <meta name="twitter:image" content="https://xn--v69ap5s3zcl6hspa.com/og-main.png" />
 
   <!-- ================= 스타일 ================= -->
   <style>
-    :root { --primary:#ff4d4d;--accent:#ffd54a;--text:#eaeaea;--muted:#b3b3b3;--bg:#000;--card:#0f0f0f;--border:#1f1f1f;--radius:14px;--imgw:458px }
+    :root {
+      --primary:#ff4d4d;--accent:#ffd54a;--text:#eaeaea;--muted:#b3b3b3;
+      --bg:#000;--card:#0f0f0f;--border:#1f1f1f;--radius:14px;--imgw:458px
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
-    a{color:var(--primary);text-decoration:none} a:hover{text-decoration:underline}
+    html,body{margin:0;background:var(--bg);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',Segoe UI,Roboto,Arial,sans-serif;
+      overflow-x:hidden}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
     .container{width:100%;max-width:1100px;margin:0 auto;padding:0 20px}
-    .brandbar{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
+    .brandbar{display:flex;align-items:center;justify-content:center;gap:12px;
+      padding:12px 16px;border-bottom:1px solid var(--border);background:#0b0b0b}
     .brand-logo{height:32px;width:auto;display:block}
-    .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);background:#0b0b0b;flex-wrap:wrap;justify-content:center}
+    .topnav{display:flex;gap:12px;padding:10px 20px;border-bottom:1px solid var(--border);
+      background:#0b0b0b;flex-wrap:wrap;justify-content:center}
     .topnav a{padding:8px 12px;border-radius:10px;border:1px solid transparent;color:#e4e4e4}
     .topnav a.active,.topnav a:hover{border-color:var(--border);background:#111}
     .topnav a.highlight{color:var(--accent);border-color:rgba(255,213,74,.35);background:rgba(255,213,74,.08)}
     .ticker-wrap{border-bottom:1px solid var(--border);background:#0b0b0b;padding:2px 0}
-    .tradingview-widget-container{height:36px}
     .hero{border-bottom:1px solid var(--border);padding:10px 0 12px}
     .hero-img{display:block;width:var(--imgw);max-width:100%;height:auto;margin:0 auto}
     h1{font-size:clamp(24px,3.6vw,40px);margin:16px 0 6px;letter-spacing:-.02em}
@@ -63,12 +77,15 @@
     h3{font-size:clamp(18px,2.4vw,22px);margin:16px 0 8px}
     .muted{color:var(--muted)}
     .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-    footer{border-top:1px solid var(--border);padding:24px 0 36px;color:#bbb;font-size:14px;margin-top:36px}
-    .footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:10px;opacity:.9}
+    .card{background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);padding:16px}
+    footer{border-top:1px solid var(--border);padding:24px 0 36px;color:#bbb;
+      font-size:14px;margin-top:36px}
+    .footer-brand{display:flex;align-items:center;justify-content:center;gap:12px;
+      margin-bottom:10px;opacity:.9}
     .footer-cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-    .footer-cta .icon-btn{min-width:140px;justify-content:center}
-    .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
+    .icon-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;
+      border-radius:999px;border:1px solid var(--border);background:#121212;color:#fff;font-weight:600}
     .icon-kakao{background:#FEE500;color:#000;border-color:#FEE500}
     .footer-seo{margin-top:22px}
     .footer-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
@@ -76,7 +93,7 @@
     @media (max-width:860px){.grid{grid-template-columns:1fr}.hero-img{width:100%;}}
   </style>
 
-  <!-- ================= 구조화 데이터 ================= -->
+  <!-- ================= 구조화 데이터 (JSON-LD) ================= -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -104,16 +121,21 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question","name": "초보자는 어떤 거래소가 좋나요?","acceptedAnswer": {"@type": "Answer","text": "유동성·보안이 검증된 메이저 거래소에서 시작하고, 수수료 할인과 2FA를 먼저 설정하세요."}},
-      {"@type": "Question","name": "레버리지는 몇 배가 적절한가요?","acceptedAnswer": {"@type": "Answer","text": "3~5배 이내에서 손절 기준을 먼저 정한 뒤 포지션 크기를 역산하세요."}},
-      {"@type": "Question","name": "김치프리미엄(김프)은 어떻게 활용하나요?","acceptedAnswer": {"@type": "Answer","text": "차익거래는 전송·환전·세금 리스크가 크므로 충분한 경험 이후에만 소규모로 테스트하세요."}}
+      {"@type": "Question","name": "초보자는 어떤 거래소가 좋나요?",
+        "acceptedAnswer": {"@type": "Answer","text": "유동성·보안이 검증된 메이저 거래소에서 시작하고, 수수료 할인과 2FA를 먼저 설정하세요."}},
+      {"@type": "Question","name": "레버리지는 몇 배가 적절한가요?",
+        "acceptedAnswer": {"@type": "Answer","text": "3~5배 이내에서 손절 기준을 먼저 정한 뒤 포지션 크기를 역산하세요."}},
+      {"@type": "Question","name": "김치프리미엄(김프)은 어떻게 활용하나요?",
+        "acceptedAnswer": {"@type": "Answer","text": "차익거래는 전송·환전·세금 리스크가 크므로 충분한 경험 이후에만 소규모로 테스트하세요."}},
+      {"@type": "Question","name": "거래소 보너스 이벤트는 안전한가요?",
+        "acceptedAnswer": {"@type": "Answer","text": "보너스 자체는 안전하지만, 출금 제한 조건을 반드시 확인하세요. KYC 미완료 상태에서는 보너스 손실이 발생할 수 있습니다."}}
     ]
   }
   </script>
 </head>
 
 <body>
-  <!-- ================= 상단 영역 ================= -->
+  <!-- ================= 브랜드바 ================= -->
   <div class="brandbar">
     <a href="/" aria-label="Home">
       <img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png"
@@ -204,16 +226,4 @@
     <section id="faq">
       <h2>FAQ</h2>
       <details><summary>초보자는 어떤 거래소가 좋은가요?</summary><p class="muted">유동성·보안이 검증된 메이저 거래소에서 시작하고, 수수료 할인과 2FA를 먼저 설정하세요.</p></details>
-      <details><summary>김치프리미엄(김프)은 어떻게 활용하나요?</summary><p class="muted">차익거래는 전송·환전·세금 리스크가 크므로 충분한 경험 이후에만 소규모로 테스트하세요.</p></details>
-    </section>
-  </main>
-
-  <!-- ================= 푸터 ================= -->
-  <footer>
-    <div class="container">
-      <div class="footer-brand">
-        <a href="/"><img src="https://static.wixstatic.com/media/fefa38_ff1abbe83a774ed780fe6ce339c4693d~mv2.png/v1/fill/w_242,h_36,al_c,lg_1,q_85,enc_avif,quality_auto/logo.png"
-                         alt="선물거래소 로고" width="162" height="24"/></a>
-      </div>
-      <div class="footer-cta">
-        <a class="icon-btn" href="https://t.me/sbs999" target="_blank" rel="
+      <details><summary>
