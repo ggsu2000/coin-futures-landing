@@ -2,7 +2,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <base href="/" />
-<title>코인선물거래소 | 선물거래소 가이드</title>
+<title>코인선물거래소 | 코인선물거래소 이벤트 및 정보 가이드</title>
 <meta name="description" content="코인선물거래소 비교 가이드." />
 <link rel="canonical" href="https://xn--v69ap5s3zcl6hspa.com/coin-futures/" />
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
@@ -120,3 +120,32 @@
     </section>
     <p class="muted" style="margin-top:12px;text-align:center">© 2025 선물거래소 가이드. All rights reserved.</p>
   </div></footer></body></html>
+  <!-- ✅ 하단 고정 바 (Bottom bar) -->
+  <div class="bottom" role="region" aria-label="하단 고정 바">
+    <div class="bottom-inner" style="display: flex; flex-direction: column; gap: 6px; padding: 10px 16px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1); position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; box-sizing: border-box; color: #fff; font-family: system-ui, -apple-system, sans-serif;">
+      
+      <!-- 상단 지표 라인 (증정금 현황 및 잔여 수량) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+        <div style="color: #39d2ff; font-weight: 600;">
+          🎁 금일 누적 증정금: <span id="bonusPool" style="color: #fff; font-weight: 700;">-</span>
+        </div>
+        <div style="color: #ff9aa0; font-weight: 600;">
+          🔥 잔여 혜택: <span id="slotCount" style="color: #fff; font-weight: 700;">-</span>명 (마감임박)
+        </div>
+      </div>
+
+      <!-- 메인 CTA 및 타이머 라인 -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <div class="timer-pill" style="background: rgba(255,255,255,0.08); padding: 6px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap;">
+          ⏳ 마감 <strong id="timer" style="color: #ff5e5e;">-</strong>
+        </div>
+        <a class="bottom-cta" id="ctaBottom" href="https://t.me/sbs999" target="_blank" rel="noopener" style="flex: 1; text-align: center; background: linear-gradient(90deg, #39d2ff, #2563eb); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; box-shadow: 0 4px 12px rgba(57,210,255,0.3);">
+          🚀 레퍼럴 가입 문의 (최소 100USDT 증정)
+        </a>
+      </div>
+
+      <div class="micro" style="text-align: center; font-size: 11px; color: rgba(255,255,255,0.5);">
+        ※ 선착순 조기 마감될 수 있으니 바로 참여하세요.
+      </div>
+    </div>
+  </div>
