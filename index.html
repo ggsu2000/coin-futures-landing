@@ -13,8 +13,8 @@
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- ================= SEO 메타 ================= -->
-  <title>코인 선물거래소 비교 가이드 | 안전한 거래소 선택 & 이벤트 정보</title>
-  <meta name="description" content="코인 선물거래소 종합 비교: 수수료·유동성·보안·이벤트를 기준으로 안전한 거래소를 선택하는 방법을 안내합니다. 초보자부터 트레이더까지 활용 가능한 실전 가이드.">
+  <title>선물거래소 비교 가이드 | 안전한 거래소 선택 및 이벤트 정보</title>
+  <meta name="description" content="선물거래소 종합 비교: 수수료·유동성·보안·이벤트를 기준으로 안전한 거래소를 선택하는 방법을 안내합니다. 초보자부터 트레이더까지 활용 가능한 실전 가이드.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
   <!-- ================= URL 및 다국어 ================= -->
@@ -34,10 +34,10 @@
 
   <!-- ================= Open Graph ================= -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="코인선물거래소" />
+  <meta property="og:site_name" content="선물거래소" />
   <meta property="og:url" content="https://xn--v69ap5s3zcl6hspa.com/" />
-  <meta property="og:title" content="코인 선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
-  <meta property="og:description" content="코인 선물거래소 비교 가이드: 수수료·유동성·보안·이벤트까지 종합 분석. 초보자와 트레이더 모두를 위한 스마트한 거래소 선택법." />
+  <meta property="og:title" content="선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
+  <meta property="og:description" content="선물거래소 비교 가이드: 수수료·유동성·보안·이벤트까지 종합 분석. 초보자와 트레이더 모두를 위한 스마트한 거래소 선택법." />
   <meta property="og:image" content="https://xn--v69ap5s3zcl6hspa.com/og-main.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -45,8 +45,8 @@
 
   <!-- ================= Twitter Card ================= -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="코인 선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
-  <meta name="twitter:description" content="수수료·유동성·보안·이벤트를 기준으로 코인 선물거래소를 비교합니다. 초보자도 안전하게 시작할 수 있는 가이드." />
+  <meta name="twitter:title" content="선물거래소 가이드 | 안전한 거래소 선택 & 이벤트 비교" />
+  <meta name="twitter:description" content="수수료·유동성·보안·이벤트를 기준으로 선물거래소를 비교합니다. 초보자도 안전하게 시작할 수 있는 가이드." />
   <meta name="twitter:image" content="https://xn--v69ap5s3zcl6hspa.com/og-main.png" />
 
   <!-- ================= 스타일 ================= -->
@@ -184,7 +184,7 @@
 
   <!-- ================= 메인 콘텐츠 ================= -->
   <main class="container">
-    <h1>코인 선물거래소 종합 가이드</h1>
+    <h1>선물거래소 종합 가이드</h1>
     <p class="muted">수수료·유동성·레버리지·보안·이벤트를 기준으로 국내 사용자 관점에서 선물거래소를 비교합니다.</p>
 
     <section id="what-is-futures">
@@ -388,7 +388,36 @@
         <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
       </div>
 
+<!-- ✅ 하단 고정 바 (Bottom bar) -->
+  <div class="bottom" role="region" aria-label="하단 고정 바">
+    <div class="bottom-inner" style="display: flex; flex-direction: column; gap: 6px; padding: 10px 16px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1); position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; box-sizing: border-box; color: #fff; font-family: system-ui, -apple-system, sans-serif;">
+      
+      <!-- 상단 지표 라인 (증정금 현황 및 잔여 수량) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+        <div style="color: #39d2ff; font-weight: 600;">
+          🎁 금일 누적 증정금: <span id="bonusPool" style="color: #fff; font-weight: 700;">-</span>
+        </div>
+        <div style="color: #ff9aa0; font-weight: 600;">
+          🔥 잔여 혜택: <span id="slotCount" style="color: #fff; font-weight: 700;">-</span>명 (마감임박)
+        </div>
+      </div>
 
+      <!-- 메인 CTA 및 타이머 라인 -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <div class="timer-pill" style="background: rgba(255,255,255,0.08); padding: 6px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap;">
+          ⏳ 마감 <strong id="timer" style="color: #ff5e5e;">-</strong>
+        </div>
+        <a class="bottom-cta" id="ctaBottom" href="https://t.me/sbs999" target="_blank" rel="noopener" style="flex: 1; text-align: center; background: linear-gradient(90deg, #39d2ff, #2563eb); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; box-shadow: 0 4px 12px rgba(57,210,255,0.3);">
+          🚀 레퍼럴 가입 문의 (최소 100USDT 증정)
+        </a>
+      </div>
+
+      <div class="micro" style="text-align: center; font-size: 11px; color: rgba(255,255,255,0.5);">
+        ※ 선착순 조기 마감될 수 있으니 바로 참여하세요.
+      </div>
+    </div>
+  </div>
+      
       <section class="footer-seo">
         <h2 style="text-align:center; margin:18px 0 6px; font-size:1.1rem;">사이트 탐색</h2>
         <div class="footer-links">
