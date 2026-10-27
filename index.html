@@ -388,35 +388,6 @@
         <a class="icon-btn" href="https://www.1sevenbit.com" target="_blank" rel="noopener">회사소개</a>
       </div>
 
-<!-- ✅ 하단 고정 바 (Bottom bar) -->
-  <div class="bottom" role="region" aria-label="하단 고정 바">
-    <div class="bottom-inner" style="display: flex; flex-direction: column; gap: 6px; padding: 10px 16px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1); position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; box-sizing: border-box; color: #fff; font-family: system-ui, -apple-system, sans-serif;">
-      
-      <!-- 상단 지표 라인 (증정금 현황 및 잔여 수량) -->
-      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
-        <div style="color: #39d2ff; font-weight: 600;">
-          🎁 금일 누적 증정금: <span id="bonusPool" style="color: #fff; font-weight: 700;">-</span>
-        </div>
-        <div style="color: #ff9aa0; font-weight: 600;">
-          🔥 잔여 혜택: <span id="slotCount" style="color: #fff; font-weight: 700;">-</span>명 (마감임박)
-        </div>
-      </div>
-
-      <!-- 메인 CTA 및 타이머 라인 -->
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-        <div class="timer-pill" style="background: rgba(255,255,255,0.08); padding: 6px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap;">
-          ⏳ 마감 <strong id="timer" style="color: #ff5e5e;">-</strong>
-        </div>
-        <a class="bottom-cta" id="ctaBottom" href="https://t.me/sbs999" target="_blank" rel="noopener" style="flex: 1; text-align: center; background: linear-gradient(90deg, #39d2ff, #2563eb); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; box-shadow: 0 4px 12px rgba(57,210,255,0.3);">
-          🚀 레퍼럴 가입 문의 (최소 100USDT 증정)
-        </a>
-      </div>
-
-      <div class="micro" style="text-align: center; font-size: 11px; color: rgba(255,255,255,0.5);">
-        ※ 선착순 조기 마감될 수 있으니 바로 참여하세요.
-      </div>
-    </div>
-  </div>
       
       <section class="footer-seo">
         <h2 style="text-align:center; margin:18px 0 6px; font-size:1.1rem;">사이트 탐색</h2>
@@ -436,3 +407,81 @@
 
 </body>
 </html>
+
+<!-- ✅ 하단 고정 바 -->
+  <div class="bottom" role="region" aria-label="하단 고정 바" style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 9999; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 16px; box-sizing: border-box; color: #fff; font-family: system-ui, -apple-system, sans-serif;">
+    <div class="bottom-inner" style="max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 6px;">
+      
+      <!-- 상단 지표 라인 (금일 누적 증정금 & 잔여 혜택) -->
+      <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+        <div style="color: #39d2ff; font-weight: 600;">
+          🎁 금일 누적 증정금: <span id="bonusPool" style="color: #fff; font-weight: 700;">로딩중...</span>
+        </div>
+        <div style="color: #ff9aa0; font-weight: 600;">
+          🔥 잔여 혜택: <span id="slotCount" style="color: #fff; font-weight: 700;">-</span>명 (마감임박)
+        </div>
+      </div>
+
+      <!-- 메인 CTA 및 타이머 라인 -->
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+        <div class="timer-pill" style="background: rgba(255,255,255,0.08); padding: 8px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap;">
+          ⏳ 마감 <strong id="timer" style="color: #ff5e5e;">-</strong>
+        </div>
+        <a class="bottom-cta" id="ctaBottom" href="https://t.me/sbs999" target="_blank" rel="noopener" style="flex: 1; text-align: center; background: linear-gradient(90deg, #39d2ff, #2563eb); color: #fff; padding: 10px 14px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px; box-shadow: 0 4px 12px rgba(57,210,255,0.3);">
+          🎁 레퍼럴 가입 문의 (최소 100USDT 증정)
+        </a>
+      </div>
+
+      <div class="micro" style="text-align: center; font-size: 11px; color: rgba(255,255,255,0.5);">
+        ※ 선착순 조기 마감될 수 있으니 바로 참여하세요.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /***********************
+     * 1) 금일 나간 총 증정금 (100 USDT 단위 증가)
+     ***********************/
+    (function bonusPoolCounter(){
+      const poolKey = "bbn_bonus_pool";
+      let pool = parseInt(localStorage.getItem(poolKey) || "0", 10);
+
+      // 초기값: 15,400 ~ 29,600 USDT 사이로 설정 (100 단위 정렬)
+      if(!pool || pool < 5000) {
+        pool = Math.floor(Math.random() * (296 - 154 + 1)) * 100;
+      }
+
+      const el = document.getElementById("bonusPool");
+      if(el) el.textContent = pool.toLocaleString() + " USDT";
+
+      setInterval(()=>{
+        const increment = Math.floor(Math.random() * 5 + 1) * 100; 
+        pool += increment;
+        localStorage.setItem(poolKey, String(pool));
+        if(el) el.textContent = pool.toLocaleString() + " USDT";
+      }, 10000); // 10초마다 갱신
+    })();
+
+    /***********************
+     * 2) 실시간 잔여 혜택 수량 카운터
+     ***********************/
+    (function slotCounter(){
+      const slotKey = "bbn_slots_left";
+      let slots = parseInt(localStorage.getItem(slotKey) || "0", 10);
+
+      if(!slots || slots < 3 || slots > 20) {
+        slots = Math.floor(Math.random() * 10) + 8; // 8~17명 사이 시작
+      }
+
+      const slotEl = document.getElementById("slotCount");
+      if(slotEl) slotEl.textContent = slots;
+
+      setInterval(()=>{
+        if(slots > 3 && Math.random() > 0.5) {
+          slots -= 1;
+          localStorage.setItem(slotKey, String(slots));
+          if(slotEl) slotEl.textContent = slots;
+        }
+      }, 15000); // 15초마다 확률적으로 감소
+    })();
+  </script>
